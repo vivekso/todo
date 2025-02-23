@@ -8,6 +8,7 @@ A simple and efficient task management application built with Django. It allows 
 ✅ **Mark tasks as complete** – Helps track progress efficiently.  
 ✅ **Email notifications** – Sends an email when a task is marked as complete.  
 ✅ **Soft delete** – Deleted tasks are not permanently removed, allowing for recovery.  
+✅ **PostgreSQL as Database** – Uses a robust and scalable relational database.  
 ✅ **Bootstrap-powered UI** – Clean and responsive interface for a better experience.  
 
 ---
@@ -30,6 +31,23 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```bash
 pip install -r requirements.txt
 ```
+
+### **4️⃣ Configure PostgreSQL Database**  
+Modify `settings.py` to connect to your PostgreSQL database:  
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'your_database_name',
+        'USER': 'your_database_user',
+        'PASSWORD': 'your_database_password',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+```
+📌 **Note:** Ensure PostgreSQL is installed and running on your system.
 
 ### **4️⃣ Apply Migrations**  
 ```bash
